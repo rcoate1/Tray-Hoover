@@ -18,13 +18,13 @@ console.log('the input grid size is:', grid.x, grid.y);
 //define clean grid board
 grid.board = (new Array(grid.y).fill('.').map(e => new Array(grid.x).fill('.')));
 
-//define starting positon
+//define starting position
 const start = inputs.slice(1)[0].split(" ");
 const position = {
     x: parseInt(start[0]),
     y: parseInt(start[1]),
 }
-console.log('inital hoover start location is:', position.x, position.y);
+console.log('initial hoover start location is:', position.x, position.y);
 
 //define movements 
 const movements = inputs.slice(-1)[0].split("");
@@ -61,6 +61,6 @@ function nextMove(direction) {
 console.log('final hoover positon is:', position.x, position.y);
 console.log('total dirt cleaned is:', dirtCleaned);
 
-//reverse grid orintation to position 0,0 in bottom-left for readable view
+//reverse grid orientation to position 0,0 in bottom-left for readable view
 grid.board = grid.board.reverse();
 console.log('hoover cleaned grid:',grid.board);
